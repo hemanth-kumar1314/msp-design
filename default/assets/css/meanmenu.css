@@ -349,13 +349,7 @@ a.meanmenu-reveal {
   }
 }
 
-@media (min-width: 990px) {
-    .nav-item .dropdown-menu-sub a {
-        padding-left: 120px !important;
-        color: #3c0c70 !important;
-        font-weight: 500;
-    }
-}
+
   
 
 
