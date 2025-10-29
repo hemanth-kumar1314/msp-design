@@ -1,0 +1,487 @@
+/* --- Base Styles and Global Keyframes --- */
+/* --- Base Styles and Global Keyframes (Keep these the same) --- */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/*
+ * ==========================================
+ * PRODUCT HEADER SECTION STYLES
+ * Matches the style of the screenshot banner
+ * ==========================================
+ */
+
+.fish-header-product-section {
+  /* Set the background image and size it to cover the element */
+  background-image: url("../img/products/header-feeding-fish-2048x984.jpg"); /* REPLACE with the actual image path */
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+
+  position: relative;
+}
+.chicken-header-product-section {
+  background-image: url("../img/products/Hand\ feeding\ chickens.jpg.webp");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+
+  position: relative;
+}
+.crab-header-product-section {
+  background-image: url("../img/products/crab.jpg");
+  background-size: cover;
+  background-position: center 30%; /* Centers the main focus of the image */
+  background-repeat: no-repeat;
+
+  min-height: 450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+
+  position: relative;
+}
+
+.shrimp-header-product-section {
+  background-image: url("../img/products/PXL_20221021_204624660.MP_-e1667814197604-1536x833.jpg");
+  background-position: center 60%; /* Centers the main focus of the image */
+  background-size:cover;
+  background-repeat: no-repeat;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.fish-header-product-section::before,
+.chicken-header-product-section::before,
+.crab-header-product-section::before,
+.shrimp-header-product-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+  z-index: 1; /* Place overlay below the text content */
+  border-radius: 8px;
+}
+
+
+.shrimp1{
+    background-image: url("../img/products/0045d6cd-25a8-4622-bc52-6d074de6e1c7.jpg");
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header-product-content {
+  /* Place text above the overlay */
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.header-product-title {
+  /* Style for the main, large white text */
+  font-family: "Montserrat", sans-serif;
+  font-size: 56px;
+  font-weight: 900;
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.header-product-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f1f1f1; /* Slightly off-white for the subtitle */
+  margin: 0;
+}
+
+.animate-fadein-up {
+  opacity: 0;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fadein {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* --- Section 1: Product Hero (Keep the same) --- */
+.product-hero-section {
+  padding: 40px 0 60px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.image-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.summary-content p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.categories-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category-card {
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-bottom-color: #0746d8;
+}
+
+.category-card i {
+  font-size: 40px;
+  color: #0746d8;
+  margin-bottom: 15px;
+}
+
+.category-card h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #3c0c70;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.category-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* --- Section 2: Applications & Key Benefits (NEW STYLES) --- */
+.applications-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.applications-section h2 i {
+  color: #007bff;
+  margin-right: 10px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s;
+  text-align: left;
+  height: 100%; /* Ensures equal height */
+}
+
+.benefit-card:hover {
+  background-color: #e6f7ff; /* Very light hover effect */
+}
+
+.benefit-card h3 {
+  color: #0746d8;
+  font-size: 18px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.benefit-card p {
+  font-size: 15px;
+}
+
+/* --- Section 3: Characteristics (Updated) --- */
+.characteristics-section {
+  padding: 60px 0;
+  background-color: #e6f7ff;
+  border-radius: 8px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.characteristics-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.characteristics-section h2 i {
+  color: #0746d8;
+  margin-right: 10px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.feature-item {
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-bottom-color: #0746d8;
+}
+
+.feature-item i {
+  font-size: 32px;
+  color: #0746d8;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* --- Section 1: Product Hero (Keep the same) --- */
+/* ... (Keep all preceding CSS the same) ... */
+
+.categories-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.category-card {
+  /* --- MODIFICATIONS START HERE --- */
+  display: flex; /* 1. Enable Flexbox */
+  flex-direction: column; /* 2. Stack content vertically */
+  justify-content: center; /* 3. Center content VERTICALLY */
+  align-items: center; /* 4. Center content HORIZONTALLY */
+  text-align: center; /* 5. Ensure text is centered */
+  /* --- MODIFICATIONS END HERE --- */
+
+  text-decoration: none;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-bottom: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-bottom-color: #0746d8;
+}
+
+.category-card i {
+  font-size: 40px;
+  color: #0746d8;
+  margin-bottom: 15px;
+}
+
+.category-card h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #3c0c70;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.category-card p {
+  color: #666;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ... (Keep all succeeding CSS the same) ... */
+
+/* --- Media Queries for Responsiveness --- */
+/*
+ * ==========================================
+ * RESPONSIVENESS
+ * ==========================================
+ */
+@media (max-width: 768px) {
+  .header-product-section {
+    min-height: 350px; /* Smaller height on mobile */
+  }
+  .header-product-title {
+    font-size: 40px; /* Smaller font on mobile */
+  }
+  .header-product-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Keyframe Animations (Keep the same) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .benefits-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features-grid {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 36px;
+    margin-top: 15px;
+  }
+  .benefits-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .summary-content {
+    font-size: 10px;
+    line-height: 30px;
+  }
+  .features-grid {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+}

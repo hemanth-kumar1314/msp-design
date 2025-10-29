@@ -1,0 +1,230 @@
+/* --- Base Styles and Global Keyframes --- */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.page-header {
+  text-align: center;
+  padding: 30px 20px 10px;
+  background-color: #f9f9f9;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* --- Keyframe Animation for Fade-in/Slide-up --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation classes */
+.animate-fadein-up {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* --- Section 1: Hero Section with Background Image and Filter --- */
+.hero-raw-materials {
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 40px;
+  color: white; /* Ensure text is white for contrast */
+}
+
+/* Pseudo-element for Background Image and Filter */
+.hero-raw-materials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  /* Set the background image and size properties here */
+  background-image: url("../img/about/AdobeStock_194657415-2048x1050.jpeg"); /* Placeholder image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /* APPLY FILTER to darken image for text readability */
+  filter: brightness(0.4);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --- Section 2: India Hub --- */
+.india-hub-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  border-bottom: 5px solid transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border-bottom-color: #0746d8;
+}
+
+.stat-card i {
+  font-size: 36px;
+  color: #0746d8;
+
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-family: "Montserrat", sans-serif;
+  color: #3c0c70;
+  font-size: 28px;
+  margin: 5px 0;
+}
+
+.advantages-list {
+  text-align: left;
+  max-width: 900px;
+  margin: 40px auto 0;
+  background-color: #eaf7f7;
+  padding: 30px;
+  border-left: 5px solid #0746d8;
+  border-radius: 4px;
+}
+
+.advantages-list ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.advantages-list li {
+  font-size: 16px;
+}
+
+.advantages-list li i {
+  color: #0746d8;
+  margin-right: 10px;
+}
+
+/* --- Section 3: Scaling & Future Focus --- */
+.scaling-section {
+  padding: 60px 20px;
+}
+
+.scaling-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.raw-materials-focus {
+  margin: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.tag {
+  background-color: #0746d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.tag i {
+  margin-right: 8px;
+  color: white;
+}
+
+.final-statement {
+  margin-top: 40px;
+  font-size: 18px;
+  font-style: italic;
+  padding-top: 20px;
+  border-top: 1px dashed #ddd;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-raw-materials h1 {
+    font-size: 38px;
+  }
+  .advantages-list ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-raw-materials h1 {
+    font-size: 30px;
+  }
+  .raw-materials-focus {
+    justify-content: flex-start;
+  }
+  .hero-raw-materials {
+    padding: 80px 20px;
+  }
+}

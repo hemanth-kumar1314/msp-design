@@ -1,0 +1,301 @@
+/* --- Base Styles --- */
+body {
+     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Light background */
+   
+}
+
+
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: #0746d8; /* Teal/Marine Color */
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+.page-header {
+    text-align: center;
+    padding: 30px 20px 10px;
+    background-color: #f9f9f9;
+}
+
+.page-header h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* --- Section Styling --- */
+section {
+    padding: 60px 0;
+}
+
+/* --- 1. Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 80px 0 60px;
+    
+    /* 1. Remove background and filter from the main element */
+    background: none; 
+    filter: none; 
+    
+    /* 2. Set positioning context for the pseudo-element */
+    position: relative; 
+    
+    /* 3. Ensure text content sits ABOVE the pseudo-element */
+    z-index: 1; 
+    
+    margin-bottom: 40px;
+}
+
+/* --- Pseudo-element for Background Image and Filter --- */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Place the pseudo-element BEHIND the text content */
+    z-index: -1; 
+    
+    /* Set the background image and size properties here */
+    background-image: url(../img/about/applsci-13-00623-g004-550.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+    
+    /* APPLY FILTER HERE (This only affects the pseudo-element) */
+    filter: brightness(0.6); 
+}
+
+.hero-title {
+    /* ... your existing white text styles remain ... */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 44px;
+    color: white; 
+    margin-bottom: 15px;
+    font-weight: 700;
+
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-subtitle {
+    /* ... your existing white text styles remain ... */
+    font-size: 20px;
+   color: white;
+
+    margin-bottom: 30px;
+    font-weight: 900;
+
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.hero-text {
+     color: white; 
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 17px;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+/* --- 2. Philosophy & Mission Section --- */
+.philosophy-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.mission-block, .zero-waste-block {
+     border:0.5px solid #0746d8;
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mission-block {
+    background-color: #fff;
+}
+
+.zero-waste-block {
+    border:0.5px solid #0746d8;
+   
+}
+
+
+.zero-waste-block i {
+    color: #79b5b5;
+}
+
+.philosophy-section h2 i {
+    margin-right: 10px;
+    color: #3c0c70;
+}
+
+/* --- 3. Sourcing Section --- */
+.sourcing-section {
+    text-align: center;
+    background-color: #fff;
+    padding: 60px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.sourcing-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.card {
+    flex: 1;
+    max-width: 400px;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.card h3 {
+    color: #3c0c70;
+    font-family: 'Montserrat', sans-serif;
+    margin: 15px 0;
+}
+
+.card i {
+    font-size: 36px;
+    color: #0746d8;
+}
+
+/* --- 4. Innovation Section --- */
+.innovation-section {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product-item {
+    background-color: #0746d8;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.product-item span {
+    margin-right: 8px;
+    font-weight: 700;
+}
+
+/* --- 5. Global Commitment Section --- */
+.global-section {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.principle {
+    text-align: center;
+}
+
+.principle i {
+    font-size: 30px;
+   color: #0746d8;
+    margin-bottom: 15px;
+}
+
+.principle h4 {
+    font-family: 'Montserrat', sans-serif;
+   
+      color: #3c0c70;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .philosophy-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hero-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 28px;
+    }
+    .sourcing-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .product-list {
+        justify-content: flex-start;
+    }
+    .product-item {
+        padding: 10px 20px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at final position */
+    }
+}

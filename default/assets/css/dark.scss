@@ -1,0 +1,606 @@
+/*================================================
+Default CSS
+=================================================*/
+$red-color : #ff440a;
+$primary-color: #16056b;
+$body-color: #ffffff;
+$heading-color: #ffffff;
+// Switch css
+.switch-box {
+    position: fixed;
+    z-index: 1;
+    left: 3%;
+    bottom: 63px;
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #4d4949;
+        transition: 0.4s;
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 30px;
+            width: 30px;
+            left: 2.5px;
+            bottom: 4px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            transition: 0.4s;
+            box-shadow: 0 0px 15px #2020203d;
+            background: url(../../assets/img/night.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    input:checked + .slider {
+        background-color: #cbc1c1;
+    }
+    input:focus + .slider {
+        background-color: #4d4949;
+    }
+    input:checked + .slider:before {
+        transform: translateX(24px);
+        background: url(../../assets/img/sunny.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .slider {
+        &.round {
+            border-radius: 50px;
+
+            &:before {
+                border-radius: 50%;
+            } 
+        }
+    }
+}
+// Dark Style CSS
+.theme-dark {
+    body {
+        background-color: #000000;
+        color: #f1f1f1;
+    }
+    p {
+        color: #f1f1f1 !important;
+        
+        a {
+            color: #f1f1f1 !important;
+
+            &:hover {
+                color: $primary-color !important;
+            }
+        }
+    }
+    a {
+        color: $body-color;
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: $heading-color !important;
+        a {
+            color: $heading-color !important;
+
+            &:hover {
+                color: $primary-color !important;
+            }
+        }
+    }
+    
+    //Top Header
+    .header-area {
+        background: #222121;
+    }
+
+    //Navbar
+    .navbar-area {
+        .navbar-brand {
+            .white-logo {
+                display: block;
+            }
+            .main-logo {
+                display: none;
+            }
+        }
+        &.is-sticky {
+            background-color: #000000;
+        }
+    }
+    .main-nav {
+        background-color: #000000;
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        color: $body-color;
+
+                        &:hover, &:focus, &.active {
+                            color: $red-color;
+                        }
+                    }
+                    &:hover, &:focus, &.active {
+                        a {
+                            color: $red-color;
+                        }
+                    }
+                    .dropdown-menu {
+                        background: #0e0e0e;
+                        .nav-item {
+                            a {
+                                color: $body-color;
+                            }
+                        }
+                        
+                        li {
+                            a {
+                                color: $body-color;
+                                border-bottom: 1px dashed #000000;
+                                
+                                &:hover, &:focus, &.active {
+                                    color: $red-color;
+                                }
+                            }
+                            .dropdown-menu {
+                                li {
+                                    a {
+                                        color: $body-color;
+                                        border-bottom: 1px dashed #000000;
+
+                                        &:hover, &:focus, &.active {
+                                            color: $red-color;
+                                        }
+                                    }
+                                    .dropdown-menu {
+                                        li {
+                                            a {
+                                                color: $body-color;
+
+                                                &:hover, &:focus, &.active {
+                                                    color: $red-color;
+                                                }
+                                            }
+                                            .dropdown-menu {
+                                                li {
+                                                    a {
+                                                        color: $body-color;
+                                                        
+                                                        &:hover, &:focus, &.active {
+                                                            color: $red-color;
+                                                        }
+                                                    }
+                                                    .dropdown-menu {
+                                                        li {
+                                                            a {
+                                                                color: $body-color;
+                                                                
+                                                                &:hover, &:focus, &.active {
+                                                                    color: $red-color;
+                                                                }
+                                                            }
+                                                            .dropdown-menu {
+                                                                li {
+                                                                    a {
+                                                                        color: $body-color;
+                                                                        
+                                                                        &:hover, &:focus, &.active {
+                                                                            color: $red-color;
+                                                                        }
+                                                                    }
+                                                                    .dropdown-menu {
+                                                                        li {
+                                                                            a {
+                                                                                color: $body-color;
+
+                                                                                &:hover, &:focus, &.active {
+                                                                                    color: $red-color;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    &.active {
+                                                                        a {
+                                                                            color: $red-color;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                            &.active {
+                                                                a {
+                                                                    color: $red-color;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &.active {
+                                                        a {
+                                                            color: $red-color;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            &.active {
+                                                a {
+                                                    color: $red-color;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &.active {
+                                        a {
+                                            color: $red-color;
+                                        }
+                                    }
+                                }
+                            }
+                            &.active {
+                                a {
+                                    color: $red-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                ul {
+                    li {
+                        .sign-in {
+                            color: $body-color;
+                        }
+                        .cart-icon {
+                            i {
+                                color: $body-color;
+                                &:hover {
+                                    color: $red-color;
+                                }
+                            }
+                        }
+                        .search-btn {
+                            color: $body-color;
+                            &:hover {
+                                color: $red-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Banner
+    .banner-style-two {
+        &.banner-bg {
+            &::before {
+                background: rgba(0, 0, 0, 0.8);
+            }
+        }
+    }
+    .banner-style-three {
+        background: #171617;
+    }
+    //Page Title
+    .page-title {
+        &::before {
+            background: linear-gradient(0deg, rgba(47, 47, 47, 0.8) 0%, rgba(13, 13, 14, 0.9) 100%);
+        }
+    }
+
+    //About
+    .about-section {
+        .about-text {
+            .nav-tabs {
+                .nav-item {
+                    .nav-link {
+                        color: $body-color;
+                        &.active {
+                            color: $red-color;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Features
+    .features-section {
+        .feature-card {
+            background: #0e0e0e;
+        }
+    }
+
+    //Services
+    .transport-section {
+        .transport-card {
+            .transport-text {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .transport-style-five {
+        .transport-card {
+            background-color: #0e0e0e;
+        }
+    }
+    .service-details-area {
+        .service-sidebar {
+            .sidebar-widget {
+                ul {
+                    li {
+                        a {
+                            color: $body-color;
+                        }
+                    }
+                }
+            }
+        }
+        .service-post-area {
+            ul {
+                li {
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    //Why Choose
+    .why-choose-section {
+        .why-choose-text {
+            background: #0e0e0e;
+            .accordions {
+                .accordion-item {
+                    .accordion-title {
+                        background: #000000;
+                    }
+                    .accordion-content {
+                        background-color: #111111;
+                    }
+                }
+            }
+        }
+        .why-choose-img {
+            .shipping-text {
+                background: #000000;
+                form {
+                    .form-group {
+                        .form-control {
+                            background-color: #0e0e0e;
+                            color: $body-color;
+                            &::placeholder {
+                                color: $body-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Quote
+    .quote-bg {
+        &::before {
+            background: #0b0a0d;
+        }
+    }
+    .get-quote-section {
+        .quote-form {
+            form {
+                .form-control {
+                    background-color: #000000;
+                    color: $body-color;
+                    &::placeholder {
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+        .quote-text {
+            .offer-text {
+                span {
+                    background: #0e0e0e;
+                    border: 5px solid #000000;
+                }
+                p {
+                    background: #000000;
+                }
+            }
+        }
+    }
+
+    //Workers
+    .worker-section {
+        .worker-card {
+            .worker-text {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+
+    //Feedback
+    .feedback-bg {
+        &::before {
+            background: #090909;
+        }
+    }
+
+    //Company
+    .company-section {
+        .company-slider {
+            background: #292929;
+        }
+        &.company-style-two {
+            .company-slider {
+                background: transparent;
+            }
+        }
+    }
+
+    //Blog
+    .blog-section {
+        .blog-card {
+            .blog-text {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .blog-details-area {
+        .blog-sidebar {
+            .blog-search {
+               background-color: #0e0e0e;
+                form {
+                    input {
+                       background: #000000;
+                       color: $body-color;
+                        &::placeholder {
+                           color: $body-color;
+                        }
+                    }
+                }
+            }
+            .blog-widget {
+                background-color: #0e0e0e;
+                ul {
+                    li {
+                        a{
+                            color: $body-color;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+
+    //Newsletter
+    .newsletter-section {
+        .newsletter-area {
+            background: #0e0e0e;
+            .newsletter-form {
+                .form-control {
+                    background-color: #000000;
+                    color: $body-color;
+                    &::placeholder {
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+    }
+    .newsletter-style-two {
+        background: #242424;
+    }
+
+    //Footer
+    .footer-area {
+        background: #1c1c1c;
+        .copyright-area {
+            background: #000000;
+        }
+    }
+
+    //fecilitis
+    .facilities-section {
+        .facilities-text {
+            ul {
+                li {
+                    color: $body-color;
+                }
+            }
+        }
+    }
+
+    //Contact
+    .contact-section {
+        background: #242424;
+        .contact-area {
+            .form-group {
+                .form-control {
+                    background-color: #000000;
+                    color: $body-color;
+                    &::placeholder {
+                        color: $body-color;
+                    }
+                }
+                .message-field {
+                    background-color: #000000;
+                    color: $body-color;
+                    &::placeholder {
+                        color: $body-color;
+                    }
+                }
+            }
+        }
+    }
+    .contact-style-two {
+        background-color: #000000;
+        .contact-area {
+            background-color: #0e0e0e;
+        }
+    }
+    .contact-card-section {
+        .contact-card {
+            &::before {
+                background: #0e0e0e;
+            }
+        }
+    }
+
+    //Faq
+    .faq-section {
+        .accordions {
+            .accordion-item {
+                .accordion-title {
+                    background: #0e0e0e;
+                }
+                .accordion-content {
+                    background-color: #292929;
+                }
+            }
+        }
+    }
+    
+
+    @media only screen and (max-width: 991px) {
+        .navbar-area {
+            .mean-container {
+                .mean-bar {
+                    background-color: #000000;
+                }
+                a {
+                    &.meanmenu-reveal {
+                        span {
+                            background: $body-color;
+                        }
+                    }
+                }
+            }
+        }
+        .mobile-nav {
+            .logo {
+                .main-logo {
+                    display: none;
+                }
+                .white-logo {
+                    display: block;
+                }
+            }
+        }
+    }
+}
