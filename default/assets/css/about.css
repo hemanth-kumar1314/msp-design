@@ -76,7 +76,7 @@ section {
     z-index: -1; 
     
     /* Set the background image and size properties here */
-    background-image: url(../img/about/Færøsk_havbrug.1.jpg);
+    background-image: url(../img/about/aboutimage.jpg);
     background-size: cover; 
     background-repeat: no-repeat; 
     background-position: center center;
