@@ -90,6 +90,7 @@ a.meanmenu-reveal {
     font-size: 14px;
 }
 
+
 .mean-container .mean-nav ul li.mean-last a {
     border-bottom: none;
     margin-bottom: 0;
@@ -315,3 +316,46 @@ a.meanmenu-reveal {
     left: auto;
     right: 0;
 }
+@media (max-width: 480px) {
+  .nav-item .dropdown-menu-sub a {
+    padding-left: 50px !important; 
+    color: #3c0c70 !important;
+    font-weight: 500;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 520px) {
+  .nav-item .dropdown-menu-sub a {
+    padding-left: 60px !important; 
+    color: #3c0c70 !important;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 521px) and (max-width: 729px) {
+  .nav-item .dropdown-menu-sub a {
+    padding-left: 75px !important; 
+    color: #3c0c70 !important;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 730px) and (max-width: 989px) {
+  .nav-item .dropdown-menu-sub a {
+    padding-left: 100px !important; 
+    color: #3c0c70 !important;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 990px) {
+    .nav-item .dropdown-menu-sub a {
+        padding-left: 120px !important;
+        color: #3c0c70 !important;
+        font-weight: 500;
+    }
+}
+  
+
+

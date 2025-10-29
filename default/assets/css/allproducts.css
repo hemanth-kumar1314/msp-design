@@ -399,22 +399,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ... (Keep all succeeding CSS the same) ... */
-
 /* --- Media Queries for Responsiveness --- */
 /*
  * ==========================================
@@ -423,10 +407,10 @@ body {
  */
 @media (max-width: 768px) {
   .header-product-section {
-    min-height: 350px; /* Smaller height on mobile */
+    min-height: 350px; 
   }
   .header-product-title {
-    font-size: 40px; /* Smaller font on mobile */
+    font-size: 40px; 
   }
   .header-product-subtitle {
     font-size: 16px;
