@@ -460,9 +460,10 @@ body {
   .features-grid {
     grid-template-columns: 1fr;
   }
-  .summary-content {
-    font-size: 10px;
-    line-height: 30px;
+  .summary-content p {
+    font-size: 15px;
+    line-height: 27px;
+    margin: 0 6px 9px;
   }
   .features-grid {
     margin-left: 0.6rem;
