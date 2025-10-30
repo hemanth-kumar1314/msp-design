@@ -40,9 +40,12 @@ p {
     color: #777;
 }
 
-/* --- Section Styling --- */
+
 section {
     padding: 60px 0;
+}
+.nav-header-section{
+    padding: 0;
 }
 
 /* --- 1. Hero Section --- */
@@ -161,7 +164,6 @@ section {
     background-color: #fff;
     padding: 60px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .sourcing-cards {
@@ -223,7 +225,6 @@ section {
 
 /* --- 5. Global Commitment Section --- */
 .global-section {
-    background-color: #f4f4f4;
     padding: 40px 20px;
     margin-top: 40px;
     text-align: center;
@@ -300,3 +301,4 @@ section {
         transform: translateY(0); /* End at final position */
     }
 }
+

@@ -6,22 +6,7 @@ body {
     color: #333;
 }
 
-/* --- Header & Navigation Styling --- */
-header {
-    background-color: #fff;
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-}
 
-
-
-.contact-info a {
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-}
-
-/* --- Page Header (Contact Us Title) --- */
 .page-header {
     text-align: center;
     padding: 30px 20px 10px;
@@ -39,11 +24,9 @@ header {
     color: #777;
 }
 
-
-/* --- Map Section Styling (Placeholder) --- */
 .map-section-container {
     width: 100%;
-    margin: 0  auto;
+    margin: 0 auto;
     height: 350px; 
     overflow: hidden;
     position: relative;
@@ -54,35 +37,34 @@ header {
 }
 
 .map-section-container iframe {
-    /* Ensures the iframe takes up the full container space */
     width: 100%;
     height: 100%;
 }
 
-/* --- Contact Form Layout --- */
 .form-container-wrapper {
     background-color: #fff;
-    padding: 40px 0;
+    padding: 40px 15px; 
 }
 
 .form-container {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle lift */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
     border-radius: 8px;
     overflow: hidden;
+    flex-direction: row; 
 }
 
-/* --- Left Panel (Go Local) Styling --- */
 .go-local {
     flex: 1;
-    background-color:#190231; /* Dark background as shown */
+    background-color:#190231; 
     color: #fff;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 300px; 
 }
 
 .go-local h2 {
@@ -121,7 +103,6 @@ header {
     font-size: 24px;
 }
 
-/* --- Right Panel (Get in Touch) Styling --- */
 .get-in-touch {
     flex: 2;
     padding: 40px;
@@ -154,14 +135,14 @@ header {
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
-    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-    -webkit-appearance: none; /* Removes default browser styling for select */
+    box-sizing: border-box; 
+    -webkit-appearance: none; 
     -moz-appearance: none;
     appearance: none;
 }
 .get-in-touch input::placeholder,
 .get-in-touch textarea::placeholder {
-    color: #333; /* Light gray color */
+    color: #333; 
 }
 
 .get-in-touch input:focus,
@@ -177,11 +158,40 @@ header {
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        box-shadow: none; 
+    }
 
-/* Placeholder for the Map image if you want to use a local file */
-/* Create a file named 'map_placeholder.png' or use a background image */
-.map-section {
-    background: url('path/to/your/map/image.jpg') center/cover no-repeat;
-    /* If you don't have the image, use a background color to represent the space */
-    background-color: #ccc; 
+    .go-local {
+        width: 100%;
+        border-radius: 8px 8px 0 0; /* Rounded top corners only */
+        padding: 30px 20px; /* Reduce vertical padding */
+        min-width: initial;
+    }
+    
+    .go-local h2 {
+        font-size: 24px;
+    }
+
+    .get-in-touch {
+        width: 100%;
+        padding: 30px 20px; 
+        border-radius: 0 0 8px 8px;
+        border: 1px solid #ddd;
+        border-top: none;
+    .get-in-touch h2 {
+        font-size: 24px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .map-section-container {
+        height: 250px; 
+    }
+}
 }

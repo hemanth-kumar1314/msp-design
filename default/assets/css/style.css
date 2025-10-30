@@ -4340,10 +4340,10 @@ h3 {
   }
 }
 
-/* Animation CSS End */
+@media (max-width: 992px) {
+    .nav-header-section{
+       margin-top: 60px;
+    }
+}
 
-/*# sourceMappingURL=style.css.map */
-
-
-/*   */
 
