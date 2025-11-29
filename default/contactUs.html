@@ -210,7 +210,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="blog.html" class="nav-link ">Blog</a>
+                                <a href="#" class="nav-link ">Blog</a>
 
                             </li>
                             <li class="nav-item">
@@ -260,71 +260,72 @@
                         compromising the superior service and meticulous standards we maintain throughout our factory
                         process</p>
 
-                    <form>
-                        <div class="form-row">
-                            <input type="text" name="name" placeholder="Name" required>
-                            <input type="text" name="company" placeholder="Company Name">
-                        </div>
+                    <form id="whatsappInquiryForm"> 
+    
+    <div class="form-row">
+        <input type="text" name="name" id="inquiryName" placeholder="Name" required>
+        <input type="text" name="company" id="inquiryCompany" placeholder="Company Name">
+    </div>
 
-                        <div class="form-row">
-                            <div class="custom-select">
-                                <select name="country" required>
-                                    <option value="" disabled selected hidden>Select Country</option>
-                                    <option value="IN">🇮🇳 India (+91)</option>
-                                    <option value="US">🇺🇸 United States (+1)</option>
-                                    <option value="CA">🇨🇦 Canada (+1)</option>
-                                    <option value="GB">🇬🇧 United Kingdom (+44)</option>
-                                    <option value="AU">🇦🇺 Australia (+61)</option>
-                                    <option value="DE">🇩🇪 Germany (+49)</option>
-                                    <option value="FR">🇫🇷 France (+33)</option>
-                                    <option value="NL">🇳🇱 Netherlands (+31)</option>
-                                    <option value="SG">🇸🇬 Singapore (+65)</option>
-                                    <option value="AE">🇦🇪 UAE (+971)</option>
-                                    <option value="JP">🇯🇵 Japan (+81)</option>
-                                    <option value="CN">🇨🇳 China (+86)</option>
-                                    <option value="KR">🇰🇷 South Korea (+82)</option>
-                                    <option value="BR">🇧🇷 Brazil (+55)</option>
-                                    <option value="MX">🇲🇽 Mexico (+52)</option>
-                                    <option value="ZA">🇿🇦 South Africa (+27)</option>
-                                    <option value="ES">🇪🇸 Spain (+34)</option>
-                                    <option value="IT">🇮🇹 Italy (+39)</option>
-                                    <option value="TR">🇹🇷 Turkey (+90)</option>
-                                    <option value="TH">🇹🇭 Thailand (+66)</option>
-                                    <option value="VN">🇻🇳 Vietnam (+84)</option>
-                                    <option value="PH">🇵🇭 Philippines (+63)</option>
-                                </select>
-                            </div>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
+    <div class="form-row">
+        <div class="custom-select">
+            <select name="country" id="inquiryCountry" required>
+                <option value="" disabled selected hidden>Select Country</option>
+                <option value="+91">🇮🇳 India (+91)</option>
+                <option value="+1">🇺🇸 United States (+1)</option>
+                <option value="+1">🇨🇦 Canada (+1)</option>
+                <option value="+44">🇬🇧 United Kingdom (+44)</option>
+                <option value="+61">🇦🇺 Australia (+61)</option>
+                <option value="+49">🇩🇪 Germany (+49)</option>
+                <option value="+33">🇫🇷 France (+33)</option>
+                <option value="+31">🇳🇱 Netherlands (+31)</option>
+                <option value="+65">🇸🇬 Singapore (+65)</option>
+                <option value="+971">🇦🇪 UAE (+971)</option>
+                <option value="+81">🇯🇵 Japan (+81)</option>
+                <option value="+86">🇨🇳 China (+86)</option>
+                <option value="+82">🇰🇷 South Korea (+82)</option>
+                <option value="+55">🇧🇷 Brazil (+55)</option>
+                <option value="+52">🇲🇽 Mexico (+52)</option>
+                <option value="+27">🇿🇦 South Africa (+27)</option>
+                <option value="+34">🇪🇸 Spain (+34)</option>
+                <option value="+39">🇮🇹 Italy (+39)</option>
+                <option value="+90">🇹🇷 Turkey (+90)</option>
+                <option value="+66">🇹🇭 Thailand (+66)</option>
+                <option value="+84">🇻🇳 Vietnam (+84)</option>
+                <option value="+63">🇵🇭 Philippines (+63)</option>
+            </select>
+            </div>
+        <input type="email" name="email" id="inquiryEmail" placeholder="Email" required>
+    </div>
 
-                        <div class="form-row">
-                            <select name="products" required>
-                                <option value="" disabled selected hidden>Select Product Category</option>
-                                <option value="Fish_Oil">Fish Oil / Marine Lipids</option>
-                                <option value="Protein_Hydrolysate">Protein Hydrolysate / Peptides</option>
-                                <option value="Chitin_Chitosan">Chitin & Chitosan</option>
-                                <option value="Fish_Meal">Fish Meal / Animal Feed Ingredients</option>
-                                <option value="Aquaculture_Feed">Aquaculture Feed Ingredients</option>
-                                <option value="Fertilizer_Agri">Agricultural Products / Bio-stimulants</option>
-                                <option value="Other_Ingredients">Other Value-Added Ingredients</option>
-                            </select>
+    <div class="form-row">
+        <select name="products" id="inquiryProducts" required>
+            <option value="" disabled selected hidden>Select Product Category</option>
+            <option value="Fish_Oil">Fish Oil / Marine Lipids</option>
+            <option value="Protein_Hydrolysate">Protein Hydrolysate / Peptides</option>
+            <option value="Chitin_Chitosan">Chitin & Chitosan</option>
+            <option value="Fish_Meal">Fish Meal / Animal Feed Ingredients</option>
+            <option value="Aquaculture_Feed">Aquaculture Feed Ingredients</option>
+            <option value="Fertilizer_Agri">Agricultural Products / Bio-stimulants</option>
+            <option value="Other_Ingredients">Other Value-Added Ingredients</option>
+        </select>
 
-                            <select name="requirement" class="requirement-select" required>
-                                <option value="" disabled selected hidden>Current Requirement</option>
-                                <option value="Sample_Request">Request for Sample</option>
-                                <option value="Bulk_Order">Bulk Order / Pricing</option>
-                                <option value="Custom_Formulation">Custom Formulation / R&D Inquiry</option>
-                                <option value="Partnership">Partnership / Supplier Inquiry</option>
-                                <option value="General">General Inquiry</option>
-                            </select>
-                        </div>
+        <select name="requirement" id="inquiryRequirement" class="requirement-select" required>
+            <option value="" disabled selected hidden>Current Requirement</option>
+            <option value="Sample_Request">Request for Sample</option>
+            <option value="Bulk_Order">Bulk Order / Pricing</option>
+            <option value="Custom_Formulation">Custom Formulation / R&D Inquiry</option>
+            <option value="Partnership">Partnership / Supplier Inquiry</option>
+            <option value="General">General Inquiry</option>
+        </select>
+    </div>
 
-                        <textarea name="message" placeholder="Message / Detailed Requirements" rows="5"></textarea>
+    <textarea name="message" id="inquiryMessage" placeholder="Message / Detailed Requirements" rows="5"></textarea>
 
-                        <div class="theme-btn">
-                            <button type="submit" class="default-btn">Submit Request &rarr;</button>
-                        </div>
-                    </form>
+    <div class="theme-btn">
+        <button type="submit" class="default-btn">Submit Request &rarr;</button>
+    </div>
+</form>
                 </div>
             </div>
         </div>
@@ -560,4 +561,5 @@
 
 </body>
 
+  <script src="assets/js/order.js"></script>
 </html>
