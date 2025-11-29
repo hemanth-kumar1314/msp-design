@@ -1,9 +1,9 @@
 /* --- Base Styles --- */
 body {
-     font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: white; /* Light background */
+   font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
    
 }
 
@@ -164,6 +164,7 @@ section {
     padding: 60px 20px;
     border-radius: 8px;
 }
+
 
 .sourcing-cards {
     display: flex;
